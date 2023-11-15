@@ -23,7 +23,7 @@ jobs:
       CONTAINER_REGISTRY: public.ecr.aws
       CONTAINER_REPOSITORY: andreswebs/{{ cookiecutter.project_name }}
       {%- raw %}
-      IMAGE_TAG:  {{ ${{ github.sha }} }}
+      IMAGE_TAG:  ${{ github.sha }}
       {%- endraw %}
       IMAGE_DEFAULT_TAG: latest
 
@@ -36,8 +36,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           {%- raw %}
-          aws-region: {{ ${{ secrets.AWS_REGION }} }}
-          role-to-assume: {{ ${{ secrets.AWS_IAM_ROLE_ARN }} }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
           {%- endraw %}
 
       - name: Set up Docker Buildx
@@ -47,7 +47,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           {%- raw %}
-          registry: {{ ${{ env.CONTAINER_REGISTRY }} }}
+          registry: ${{ env.CONTAINER_REGISTRY }}
           {%- endraw %}
 
       - name: Build and push
@@ -60,5 +60,5 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           {%- raw %}
-          tags: {{ ${{ env.CONTAINER_REGISTRY }}/${{ env.CONTAINER_REPOSITORY }}:${{ env.IMAGE_TAG }},${{ env.CONTAINER_REGISTRY }}/${{ env.CONTAINER_REPOSITORY }}:${{ env.IMAGE_DEFAULT_TAG }} }}
+          tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.CONTAINER_REPOSITORY }}:${{ env.IMAGE_TAG }},${{ env.CONTAINER_REGISTRY }}/${{ env.CONTAINER_REPOSITORY }}:${{ env.IMAGE_DEFAULT_TAG }}
           {%- endraw %}
