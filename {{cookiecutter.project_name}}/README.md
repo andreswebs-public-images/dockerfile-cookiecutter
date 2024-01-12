@@ -4,8 +4,7 @@
 
 ## Authors
 
-**{{ cookiecutter.author_name }}** [{{ cookiecutter.author_handle }}]({{ cookiecutter.author_link }})
-
+**{{ cookiecutter.author_name }}** - [{{ cookiecutter.author_handle }}]({{ cookiecutter.author_link }})
 
 ## License
 
