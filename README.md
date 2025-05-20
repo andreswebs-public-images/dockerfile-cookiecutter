@@ -5,20 +5,32 @@ project.
 
 ## Pre-requisites
 
+### cookiecutter
+
+Install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable).
+
+We recommend using [uv](https://docs.astral.sh/uv/) to manage the Python environment. Below is one way to get started for [Homebrew](https://brew.sh) users. Follow the [cookiecutter installation instructions](https://cookiecutter.readthedocs.io/en/stable/installation.html) for other methods.
+
 ```sh
-pip install pipx
+brew install uv
+```
+
+```sh
+# uv python install ## (Optional) if you haven't installed python with uv yet
+uv venv
+source .venv/bin/activate
+uv pip install cookiecutter
 ```
 
 ## Run
 
 ```sh
-pipx run cookiecutter gh:andreswebs-public-images/dockerfile-cookiecutter
+cookiecutter gh:andreswebs-public-images/dockerfile-cookiecutter
 ```
 
 ## Authors
 
 **Andre Silva** [andreswebs](https://github.com/andreswebs)
-
 
 ## License
 

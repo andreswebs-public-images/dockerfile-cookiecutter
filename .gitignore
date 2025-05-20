@@ -1,1 +1,2 @@
 .DS_Store
+!{{cookiecutter.project_name}}/.envrc
