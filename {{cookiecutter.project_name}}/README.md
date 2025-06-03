@@ -8,4 +8,4 @@
 
 ## License
 
-This project is licensed under the [Unlicense](UNLICENSE.md).
+This project is licensed under the [Unlicense](UNLICENSE).
