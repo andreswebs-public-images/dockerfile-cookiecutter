@@ -30,8 +30,8 @@ cookiecutter gh:andreswebs-public-images/dockerfile-cookiecutter
 
 ## Authors
 
-**Andre Silva** [andreswebs](https://github.com/andreswebs)
+**Andre Silva** - [@andreswebs](https://github.com/andreswebs)
 
 ## License
 
-This project is licensed under the [Unlicense](UNLICENSE.md).
+This project is licensed under the [Unlicense](UNLICENSE).
